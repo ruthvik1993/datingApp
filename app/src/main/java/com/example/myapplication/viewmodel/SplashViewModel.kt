@@ -12,7 +12,7 @@ import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
 import retrofit2.HttpException
 
-class SplashViewModel : AndroidViewModel(Application()) {
+class SplashViewModel(application: Application) : AndroidViewModel(application) {
 
     var versionCheck= MutableLiveData<Boolean>()
      fun checkVersion() {
