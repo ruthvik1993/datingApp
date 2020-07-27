@@ -24,7 +24,7 @@ class SplashViewModel(application: Application) : AndroidViewModel(application) 
 
         val service = RetrofitFactory.makeRetrofitService()
         CoroutineScope(Dispatchers.IO).launch {
-            val response = service.getPosts()
+            val response = service.getPosts("40")
             withContext(Dispatchers.Main) {
                 try {
                     if (response.isSuccessful){

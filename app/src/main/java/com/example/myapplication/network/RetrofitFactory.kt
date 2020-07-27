@@ -14,7 +14,7 @@ object RetrofitFactory {
         return Retrofit.Builder()
             .baseUrl(BASE_URL)
             .client(makeOkHttpClient())
-            .addConverterFactory(MoshiConverterFactory.create())
+            .addConverterFactory(MoshiConverterFactory.create().asLenient())
             .build().create(RetrofitService::class.java)
     }
 
