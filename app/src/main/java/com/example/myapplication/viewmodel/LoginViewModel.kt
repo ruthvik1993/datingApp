@@ -21,8 +21,6 @@ class LoginViewModel : ViewModel() {
         }
         return userMutableLiveData
     }
-
-
     fun onButtonClick() {
         val loginUser = LoginRequestUserModel(emailAddress.getValue(), emailAddress.getValue(), "test", "tesy")
         userMutableLiveData!!.setValue(loginUser)

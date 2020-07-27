@@ -4,6 +4,7 @@ import android.app.Application
 import android.content.pm.PackageInfo
 import android.content.pm.PackageManager
 import androidx.lifecycle.AndroidViewModel
+import androidx.lifecycle.MutableLiveData
 import com.example.myapplication.network.RetrofitFactory
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
@@ -13,6 +14,7 @@ import retrofit2.HttpException
 
 class SplashViewModel : AndroidViewModel(Application()) {
 
+    var versionCheck= MutableLiveData<Boolean>()
      fun checkVersion() {
         val context = getApplication<Application>().applicationContext
         val manager: PackageManager = context.getPackageManager()
@@ -26,9 +28,9 @@ class SplashViewModel : AndroidViewModel(Application()) {
             withContext(Dispatchers.Main) {
                 try {
                     if (response.isSuccessful){
-
+                        versionCheck = MutableLiveData(false)
                     }else{
-
+                        versionCheck = MutableLiveData(true)
                     }
                 } catch (e: HttpException) {
 
