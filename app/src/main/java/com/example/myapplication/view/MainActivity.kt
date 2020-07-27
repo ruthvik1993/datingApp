@@ -24,12 +24,5 @@ class MainActivity : AppCompatActivity() {
         binding.setLoginViewModel(loginModel);
         val emailObserver = Observer<String> {newName -> Toast.makeText(this, "Hellop"+newName, Toast.LENGTH_SHORT).show()  }
         loginModel.emailAddress.observe(this, emailObserver)
-
-
-
-
-
-
-
     }
 }

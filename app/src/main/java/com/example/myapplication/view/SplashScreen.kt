@@ -8,19 +8,14 @@ import androidx.databinding.DataBindingUtil
 import com.example.myapplication.R
 import com.example.myapplication.databinding.ActivityMainBinding
 import com.example.myapplication.viewmodel.LoginViewModel
+import com.example.myapplication.viewmodel.SplashViewModel
 
 class SplashScreen : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_splash)
-
-
-
-
-
-
-
+        val splashViewModel: SplashViewModel by viewModels()
 
     }
 }
