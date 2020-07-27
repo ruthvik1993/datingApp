@@ -13,7 +13,7 @@ import retrofit2.HttpException
 
 class SplashViewModel : AndroidViewModel(Application()) {
 
-    private fun checkVersion() {
+     fun checkVersion() {
         val context = getApplication<Application>().applicationContext
         val manager: PackageManager = context.getPackageManager()
         var info: PackageInfo? = null
@@ -25,9 +25,9 @@ class SplashViewModel : AndroidViewModel(Application()) {
             val response = service.getPosts()
             withContext(Dispatchers.Main) {
                 try {
-                    if (response.isSuccessful) {
-                        //Do something with response e.g show to the UI.
-                    } else {
+                    if (response.isSuccessful){
+
+                    }else{
 
                     }
                 } catch (e: HttpException) {

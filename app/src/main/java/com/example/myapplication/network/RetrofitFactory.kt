@@ -8,7 +8,7 @@ import retrofit2.converter.moshi.MoshiConverterFactory
 import java.util.concurrent.TimeUnit
 
 object RetrofitFactory {
-    const val BASE_URL = "https://jsonplaceholder.typicode.com"
+    const val BASE_URL = "http://13.52.191.154:3000/route/"
 
     fun makeRetrofitService(): RetrofitService {
         return Retrofit.Builder()
